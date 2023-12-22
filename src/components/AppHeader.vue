@@ -15,8 +15,8 @@ export default{
 </template>
 
 <style lang="scss" scoped>
-@use './styles/partials/variables' as *;
-@use './styles/mixins' as *;
+@use './styles/partials/variables.scss' as *;
+@use './styles/mixins.scss' as *;
 
 header {
     text-align: center;
