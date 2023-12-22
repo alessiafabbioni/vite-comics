@@ -1,42 +1,61 @@
 <script>
 export default{
-    name: "PageMenu"
+    name: "PageMenu",
+    data () {
+        return {
+            cards: [
+                {
+                    text: "DIGITAL COMICS",
+                    url: "#",
+                    img: "/img/buy-comics-digital-comics.png",
+                    alt: "digital comics",
+                    current: false,
+                },
+                {
+                    text: "DC MERCHANDISE",
+                    url: "#",
+                    img: "/img/buy-comics-merchandise.png",
+                    alt: "merchandise",
+                    current: false,
+                },
+                {
+                    text: "SHOP LOCATOR",
+                    url: "#",
+                    img: "/img/buy-comics-shop-locator.png",
+                    alt: "shop locator",
+                    current: false,
+                },
+                {
+                    text: "SUBSCRIPTION",
+                    url: "#",
+                    img: "/img/buy-comics-subscriptions.png",
+                    alt: "subscription",
+                    current: false,
+                },
+                {
+                    text: "DC POWER VISA",
+                    url: "#",
+                    img: "/img/buy-dc-power-visa.svg",
+                    alt: "dc power visa",
+                    current: false,
+                },
+
+            ]
+
+            
+        }
+    }
 }
 </script>
 
 <template>
     <section class="page-menu">
-        <div class="page-card">
-            <a href="/">
-                <img src="/img/buy-comics-digital-comics.png" alt="digital comics">
+        <div v-for="card in cards" class="page-card">
+            <a :href="card.url" :class="card.current ? 'active' : ''">
+                <img :src="card.img" :alt="card.alt">
             </a>
-            <span>DIGITAL COMICS</span>
+            <a><span>{{ card.text }}</span></a>
         </div>
-        <div class="page-card">
-            <a href="/">
-                <img src="/img/buy-comics-merchandise.png" alt="merchandise">
-            </a>
-            <span>DC MERCHANDISE</span>
-        </div>
-        <div class="page-card">
-            <a href="/">
-                <img src="/img/buy-comics-shop-locator.png" alt="shop locator">
-            </a>
-            <span>SHOP LOCATOR</span>
-        </div>
-        <div class="page-card">
-            <a href="/">
-                <img src="/img/buy-comics-subscriptions.png" alt="subscriptions">
-            </a>
-            <span>SUBSCRIPTION</span>
-        </div>
-        <div class="page-card">
-            <a href="/">
-                <img src="/img/buy-dc-power-visa.svg" alt="power visa">
-            </a>
-            <span>DC POWER VISA</span>
-        </div>
-        
     </section>
   
 </template>
@@ -45,6 +64,7 @@ export default{
 @use '../styles/partials/variables.scss' as *;
 @use '../styles/partials/mixins.scss' as *;
 
+/* insert info regarding class active*/
 .page-menu {
     background-color: $secondary;
     @include center();
@@ -58,6 +78,13 @@ export default{
         span {
             padding: 1rem;
             font-size: 12px;
+            color: white;
+            @include center();
+
+            &.active,
+            &:hover {
+                border-bottom: solid 5px white;
+            }
         }
     }
 
