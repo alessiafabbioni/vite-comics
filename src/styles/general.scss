@@ -7,8 +7,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
 img {
     max-width: 100%;
+    object-fit: cover;
 }
 
 a {

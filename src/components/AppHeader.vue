@@ -6,9 +6,11 @@ export default{
 
 <template>
   <header>
+    <!-- logo principale -->
     <a href="/">
         <img src="/img/dc-logo.png" alt="DC Logo">
     </a>
+    <!-- navigazione menu principale -->
     <ul>
         <li><a href="/">CHARACTERS</a></li>
         <li><a href="/">COMICS</a></li>
@@ -32,7 +34,7 @@ export default{
 
 header {
     text-align: center;
-    @include space-between();
+    @include space-between;
 
     a {
         padding: 1rem;
@@ -41,20 +43,20 @@ header {
 
     ul {
         list-style: none;
-        margin: 2.5rem 1rem 4rem;
+        margin: 0 2rem; 
         @include center();
 
         li a{
             display: inline-block;
-            padding: 1rem;
+            padding: 2.5rem 1rem 5rem;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.5s;
+            transition: color 0.3s;
 
             &.active,
             &:hover {
                 color: $secondary;
-                border-bottom: solid 3px $secondary; 
+                border-bottom: solid 7px $secondary; 
             }
 
 

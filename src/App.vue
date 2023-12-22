@@ -1,15 +1,26 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
+import ListProducts from './components/ListProducts.vue'
+import PageMenu from './components/PageMenu.vue'
+
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    ListProducts,
+    PageMenu
   }
 }
 </script>
 
 <template>
   <AppHeader/>
+  <main>
+    <ListProducts/>
+    <PageMenu/>
+  </main>
+  
+
 
 </template>
 
