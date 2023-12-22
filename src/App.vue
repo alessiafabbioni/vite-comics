@@ -2,13 +2,15 @@
 import AppHeader from './components/AppHeader.vue'
 import ListProducts from './components/ListProducts.vue'
 import PageMenu from './components/PageMenu.vue'
+import FooterMenu from './components/FooterMenu.vue'
 
 
 export default {
   components: {
     AppHeader,
     ListProducts,
-    PageMenu
+    PageMenu,
+    FooterMenu
   }
 }
 </script>
@@ -19,6 +21,7 @@ export default {
     <ListProducts/>
     <PageMenu/>
   </main>
+  <FooterMenu/>
   
 
 
