@@ -31,7 +31,7 @@ export default{
         <nav class="col" v-for="footerNav in footerNavs" :key="footerNav.section">
             <h3>{{ footerNav.section }}</h3>
             <ul>
-                <li v-for="link in footerNav.links" :key="link">{{ link }}</li>
+                <li v-for="link in footerNav.links" :key="link"><a href="/">{{ link }}</a></li>
             </ul>
         </nav>
 
@@ -59,8 +59,12 @@ nav {
     }
 
     li {
-        color: gray;
-        padding: 5px 0;
+        padding: 3px 0;
+        a{
+            color: gray;
+            text-decoration: none;
+        }
+        
     }
 }
 
