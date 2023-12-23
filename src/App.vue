@@ -10,7 +10,7 @@ export default {
     AppHeader,
     ListProducts,
     PageMenu,
-    FooterMenu
+    FooterMenu,
   }
 }
 </script>
