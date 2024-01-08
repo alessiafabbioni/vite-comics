@@ -3,6 +3,7 @@ import AppHeader from './components/AppHeader.vue'
 import ListProducts from './components/ListProducts.vue'
 import PageMenu from './components/PageMenu.vue'
 import FooterMenu from './components/FooterMenu.vue'
+import FooterCta from './components/FooterCta.vue'
 
 
 export default {
@@ -11,6 +12,7 @@ export default {
     ListProducts,
     PageMenu,
     FooterMenu,
+    FooterCta,
   }
 }
 </script>
@@ -22,6 +24,7 @@ export default {
     <PageMenu/>
   </main>
   <FooterMenu/>
+  <FooterCta/>
   
 
 

@@ -52,6 +52,7 @@ nav {
 
     h3 {
         color: white;
+        padding: 10px 0;
     }
 
     ul {
